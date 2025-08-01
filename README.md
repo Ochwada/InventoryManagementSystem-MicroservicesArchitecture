@@ -24,6 +24,7 @@ MicroInventorySystem/
 ├── product-service/ # Product catalog (PostgreSQL)
 ├── inventory-service/ # Inventory tracking (MongoDB)
 ├── order-service/ # Order management (MongoDB)
+├── notification-service/ # Notification management (MongoDB)
 │
 ├── docker-compose.yml # Multi-service Docker orchestration
 └── README.md # Project documentation
@@ -106,6 +107,7 @@ Ensure your directory looks like this:
 MicroInventorySystem/
 ├── docker-compose.yml
 ├── .gitignore
+├── README.md
 │
 ├── product-service/
 ├── inventory-service/
