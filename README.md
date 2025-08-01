@@ -7,12 +7,12 @@ It follows a microservices architecture, ensuring that each component is scalabl
 
 This system consists of 4  microservices:
 
-| Microservice                                                                             | Database   | Port | Status         |
-|------------------------------------------------------------------------------------------|------------|------|----------------|
-| [**Product Service**](https://github.com/Ochwada/MicroInventorySystem-Product)           | PostgreSQL | 9090 | ✅ Done         |
-| [**Inventory Service**](https://github.com/Ochwada/MicroInventorySystem-Inventory)       | MongoDB    | 9091 | ✅ Done         |
-| [**Order Service**](https://github.com/Ochwada/MicroInventorySystem-Order)               | MongoDB    | 9092 | ✅ Done         |
-| [**Notification Service**](https://github.com/Ochwada/MicroInventorySystem-Notification) | MongoDB    | 9093 | 🚧 In Progress |
+| Microservice                                                                             | Role / Service #             | Database   | Port | Status         |
+|------------------------------------------------------------------------------------------|------------------------------|------------|------|----------------|
+| [**Product Service**](https://github.com/Ochwada/MicroInventorySystem-Product)           | Microservice 1: Product      | PostgreSQL | 9090 | ✅ Done         |
+| [**Inventory Service**](https://github.com/Ochwada/MicroInventorySystem-Inventory)       | Microservice 2: Inventory    | MongoDB    | 9091 | ✅ Done         |
+| [**Order Service**](https://github.com/Ochwada/MicroInventorySystem-Order)               | Microservice 3: Order        | MongoDB    | 9092 | ✅ Done         |
+| [**Notification Service**](https://github.com/Ochwada/MicroInventorySystem-Notification) | Microservice 4: Notification | MongoDB    | 9093 | 🚧 In Progress |
 
 
 Each service is independently deployable and communicates over REST APIs. Docker is used for containerization and 
