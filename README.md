@@ -7,11 +7,12 @@ It follows a microservices architecture, ensuring that each component is scalabl
 
 This system consists of 3 core microservices:
 
-| Microservice                                                                       | Tech Stack                       | Database   | Port |
-|------------------------------------------------------------------------------------|----------------------------------|------------|------|
-| [**Product Service**](https://github.com/Ochwada/MicroInventorySystem-Product)     | Spring Boot, Spring Data JPA     | PostgreSQL | 9090 |
-| [**Inventory Service**](https://github.com/Ochwada/MicroInventorySystem-Inventory) | Spring Boot, Spring Data MongoDB | MongoDB    | 9091 |
-| [**Order Service**](https://github.com/Ochwada/MicroInventorySystem-Order)         | Spring Boot, Spring Data MongoDB | MongoDB    | 9092 |
+| Microservice                                                                             | Tech Stack                       | Database   | Port |
+|------------------------------------------------------------------------------------------|----------------------------------|------------|------|
+| [**Product Service**](https://github.com/Ochwada/MicroInventorySystem-Product)           | Spring Boot, Spring Data JPA     | PostgreSQL | 9090 |
+| [**Inventory Service**](https://github.com/Ochwada/MicroInventorySystem-Inventory)       | Spring Boot, Spring Data MongoDB | MongoDB    | 9091 |
+| [**Order Service**](https://github.com/Ochwada/MicroInventorySystem-Order)               | Spring Boot, Spring Data MongoDB | MongoDB    | 9092 |
+| [**Notification Service**](https://github.com/Ochwada/MicroInventorySystem-Notification) | Spring Boot, Spring Data MongoDB | MongoDB    | 9093 |
 
 Each service is independently deployable and communicates over REST APIs. Docker is used for containerization and 
 orchestration is done using **Docker Compose**.
@@ -38,7 +39,7 @@ The system is composed of several specialized services, each responsible for a s
 
 **Purpose**: Manages product catalog and metadata.
 
-#### Some Features
+#### Some Functions
 
 - Store and retrieve product details: ID, name, description, price
 - Communicate with `Inventory Service` to check stock quantity
@@ -50,7 +51,7 @@ The system is composed of several specialized services, each responsible for a s
 
 **Purpose**: Maintains stock levels for each product and updates inventory on product movement.
 
-#### Some Features
+#### Some Functions
 
 - Query available stock for a given product ID.
 - Increase or decrease stock quantities (e.g., during restocking or order placement).
@@ -63,11 +64,22 @@ The system is composed of several specialized services, each responsible for a s
 
 **Purpose**: Manages the lifecycle of customer orders.
 
-#### Some Features
+#### Some Functions
 
 - Accepts and stores customer orders
 - Checks stock availability via Inventory Service
 - Updates inventory if order is confirmed
+
+###  4️⃣ Microservice 4: Order  Service
+
+🖇️ [Git Repository : Notification Service](https://github.com/Ochwada/MicroInventorySystem-Notification)
+
+**Purpose**: Handles key events like order confirmations and stock alerts by sending simulated notifications via log output.
+
+#### Some Functions
+
+- Sends order confirmation logs to users. 
+- Logs out-of-stock alerts for admins.
 
 ---
 
@@ -84,6 +96,7 @@ The system is composed of several specialized services, each responsible for a s
 git clone https://github.com/Ochwada/MicroInventorySystem-Product.git product-service
 git clone https://github.com/Ochwada/MicroInventorySystem-Inventory.git inventory-service
 git clone https://github.com/Ochwada/MicroInventorySystem-Order.git order-service
+git clone https://github.com/Ochwada/MicroInventorySystem-Notification.git notification-service
 ```
 
 ### Step 2: Directory Layout
@@ -92,8 +105,11 @@ Ensure your directory looks like this:
 ```
 MicroInventorySystem/
 ├── docker-compose.yml
+├── .gitignore
+│
 ├── product-service/
 ├── inventory-service/
+├── notification-service/
 └── order-service/
 ```
 
