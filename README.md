@@ -32,7 +32,7 @@ MicroInventorySystem/
 ## 🖥️ The Microservices Architecture
 The system is composed of several specialized services, each responsible for a specific domain:
 
-### 🔹 Microservice 1: Product Service
+### 1️⃣ Microservice 1: Product Service
 
 🖇️ [Git Repository : Product Service](https://github.com/Ochwada/MicroInventorySystem-Product)
 
@@ -44,7 +44,7 @@ The system is composed of several specialized services, each responsible for a s
 - Communicate with `Inventory Service` to check stock quantity
 
 
-### 🔹 Microservice 2: Inventory Service
+### 2️⃣ Microservice 2: Inventory Service
 
 🖇️ [Git Repository : Inventory Service](https://github.com/Ochwada/MicroInventorySystem-Inventory)
 
@@ -57,7 +57,7 @@ The system is composed of several specialized services, each responsible for a s
 - Communicates with Order Service to validate stock availability before order placement.
 
 
-### 🔹 Microservice 3: Order  Service
+### 3️⃣ Microservice 3: Order  Service
 
 🖇️ [Git Repository : Order Service](https://github.com/Ochwada/MicroInventorySystem-Order)
 
