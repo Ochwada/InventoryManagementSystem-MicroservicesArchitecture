@@ -7,7 +7,7 @@ It follows a microservices architecture, ensuring that each component is scalabl
 
 This system consists of 5  microservices:
 
-| Microservice                                                                                  | Role / Service #               | Database   | Port | Status         |
+| Microservice                                                                                  | Role / Service                 | Database   | Port | Status         |
 |-----------------------------------------------------------------------------------------------|--------------------------------|------------|------|----------------|
 | [**Authentication  Service**](https://github.com/Ochwada/MicroInventorySystem-Authentication) | Microservice 0: Authentication |            | 9099 | ✅ Done         |
 | [**Product Service**](https://github.com/Ochwada/MicroInventorySystem-Product)                | Microservice 1: Product        | PostgreSQL | 9090 | ✅ Done         |
