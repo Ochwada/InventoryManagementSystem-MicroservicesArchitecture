@@ -5,7 +5,7 @@ It follows a microservices architecture, ensuring that each component is scalabl
 
 ## 📌 Overview
 
-This system consists of 4  microservices:
+This system consists of 5  microservices:
 
 | Microservice                                                                                  | Role / Service #               | Database   | Port | Status         |
 |-----------------------------------------------------------------------------------------------|--------------------------------|------------|------|----------------|
