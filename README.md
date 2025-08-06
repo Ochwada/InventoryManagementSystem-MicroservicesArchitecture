@@ -27,6 +27,7 @@ MicroInventorySystem/
 ├── inventory-service/ # Inventory tracking (MongoDB)
 ├── order-service/ # Order management (MongoDB)
 ├── notification-service/ # Notification management (MongoDB)
+├── authentication-Service/ # Authetication management 
 │
 ├── docker-compose.yml # Multi-service Docker orchestration
 └── README.md # Project documentation
